@@ -4,9 +4,9 @@
     "service": "odoo17",
     "overrideCommand": true,                        // 屏蔽容器的启动命令
     "workspaceFolder": "/mnt/extra-addons",
-    // "onCreateCommand": "pip3 config set global.index-url https://mirrors.aliyun.com/pypi/simple & pip3 install -r requirements.txt",
     "onCreateCommand": "pip3 config set global.index-url https://mirrors.aliyun.com/pypi/simple",
     "shutdownAction": "stopCompose",
+    "shell": "bash",
     "features": {
         
     },
@@ -17,6 +17,8 @@
         "vscode": {
             "settings": {
                 // 容器内的全局设置
+                "terminal.integrated.shellIntegration.enabled": true,
+                "terminal.integrated.defaultProfile.linux": "bash"
             },
             "extensions": [
                 "ms-python.python",
