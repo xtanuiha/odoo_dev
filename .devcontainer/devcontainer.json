@@ -1,0 +1,33 @@
+{
+    "name": "odoo17_dev",
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "odoo17",
+    "overrideCommand": true,                        // 屏蔽容器的启动命令
+    "workspaceFolder": "/mnt/extra-addons",
+    // "onCreateCommand": "pip3 config set global.index-url https://mirrors.aliyun.com/pypi/simple & pip3 install -r requirements.txt",
+    "onCreateCommand": "pip3 config set global.index-url https://mirrors.aliyun.com/pypi/simple",
+    "shutdownAction": "stopCompose",
+    "features": {
+        
+    },
+    "postCreateCommand": [
+
+    ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                // 容器内的全局设置
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.flake8",
+                "ms-python.autopep8",
+                "ms-python.isort",
+                "cweijan.vscode-postgresql-client2",
+                "guodongsun.vscode-git-cruise",
+                "redhat.vscode-xml"
+            ]
+        }
+    }
+}
